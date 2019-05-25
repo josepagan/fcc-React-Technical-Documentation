@@ -6,47 +6,61 @@
   <link rel="stylesheet" type="text/css" href="css/style.css"/>
 </head>
 <body>
-  <main id="main-doc">
-    <section id="What_is_React" class="main-section">
-      <header><h1>What is React</h1></header>
-      <p>React is a JavaScript library for building user interfaces.</p>
-      <ul>
-        <li>
-          Declarative
-          <p>React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.</p>
-          <p>Declarative views make your code more predictable and easier to debug.</p>
-        </li>
-        <li>
-          Component-Based
-          <p>Build encapsulated components that manage their own state, then compose them to make complex UIs.</p>
-          <p>Since component logic is written in JavaScript instead of templates, you can easily pass rich data through your app and keep state out of the DOM.</p>
-        </li>
-      </ul>
-    </section>
-    <section id="JSX" class="main-section">
-      <header><h1>JSX</h1></header>
-      <p>JSX is a sintax extension to JSX, it might remind you of a template language but it has all the power of Javascript.</p>
-      <code class="prettyprint">
-      const element = &#60;h1&#61;Hello, world!&#60;/h1;
-      </code>
-      <h2>Why JSX</h2>
-      <p>React embraces the fact that rendering logic is inherently coupled with other UI logic: how events are handled, how the state changes over time, and how the data is prepared for display.</p>
-      <p>Instead of artificially separating technologies by putting markup and logic in separate files, React separates concerns with loosely coupled units called “components” that contain both.</p>
-      <p>React doesn’t require using JSX, but most people find it helpful as a visual aid when working with UI inside the JavaScript code. It also allows React to show more useful error and warning messages.</p>
-      <h2>Embedding Expressions in JSX</h2>
-      <p>You can put any valid JavaScript expression inside curly  braces in JSX</p>
+  <div class="grid-container">
+    <nav id="nav-bar">
+      <a class="nav-link" href="">Primer Link</a>
+      <a class="nav-link" href="">Segundo</a>
+      <a class="nav-link" href="">Tercero</a>
+      <a class="nav-link" href=""></a>
+      <a class="nav-link" href=""></a>
+      <a class="nav-link" href=""></a>
+      <a class="nav-link" href=""></a>
+      <a class="nav-link" href=""></a>
+      <a class="nav-link" href=""></a>
+      <a class="nav-link" href=""></a>
+    </nav>
+    <main id="main-doc grid-item">
+      <section id="What_is_React" class="main-section">
+        <header><h1>What is React</h1></header>
+        <p>React is a JavaScript library for building user interfaces.</p>
+        <ul>
+          <li>
+            Declarative
+            <p>React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.</p>
+            <p>Declarative views make your code more predictable and easier to debug.</p>
+          </li>
+          <li>
+            Component-Based
+            <p>Build encapsulated components that manage their own state, then compose them to make complex UIs.</p>
+            <p>Since component logic is written in JavaScript instead of templates, you can easily pass rich data through your app and keep state out of the DOM.</p>
+          </li>
+        </ul>
+      </section>
+      <section id="JSX" class="main-section">
+        <header><h1>JSX</h1></header>
+        <p>JSX is a sintax extension to JSX, it might remind you of a template language but it has all the power of Javascript.</p>
+        <code class="prettyprint">
+          const element = &#60;h1&#61;Hello, world!&#60;/h1;
+        </code>
+        <h2>Why JSX</h2>
+        <p>React embraces the fact that rendering logic is inherently coupled with other UI logic: how events are handled, how the state changes over time, and how the data is prepared for display.</p>
+        <p>Instead of artificially separating technologies by putting markup and logic in separate files, React separates concerns with loosely coupled units called “components” that contain both.</p>
+        <p>React doesn’t require using JSX, but most people find it helpful as a visual aid when working with UI inside the JavaScript code. It also allows React to show more useful error and warning messages.</p>
+        <h2>Embedding Expressions in JSX</h2>
+        <p>You can put any valid JavaScript expression inside curly  braces in JSX</p>
 
-    </section>
-    <!-- <section id="id" class="main-section"> -->
-    <!--   <header></header> -->
-    <!-- </section> -->
-    <!-- <section id="id" class="main-section"> -->
-    <!--   <header></header> -->
-    <!-- </section> -->
-    <!-- <section id="id" class="main-section"> -->
-    <!--   <header></header> -->
-    <!-- </section> -->
-  </main>
+      </section>
+      <!-- <section id="id" class="main-section"> -->
+      <!--   <header></header> -->
+      <!-- </section> -->
+      <!-- <section id="id" class="main-section"> -->
+      <!--   <header></header> -->
+      <!-- </section> -->
+      <!-- <section id="id" class="main-section"> -->
+      <!--   <header></header> -->
+      <!-- </section> -->
+    </main>
+  </div>
 <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
 </body>
 </html>
