@@ -1,3 +1,6 @@
+body,p,section,header {
+  font-family: Arial, Helvetica, sans-serif;
+}
 section {
   border-bottom: 2px solid gray;
 }
