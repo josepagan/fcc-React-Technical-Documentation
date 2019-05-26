@@ -21,7 +21,7 @@
       </nav>
       <main id="main-doc grid-item">
         <section id="What_is_React" class="main-section">
-          <header>What is React</header>
+          <header><h1>What is React</h1></header>
           <p>React is a JavaScript library for building user interfaces.</p>
           <ul>
             <li>
@@ -37,10 +37,10 @@
           </ul>
         </section>
         <section id="JSX" class="main-section">
-          <header>JSX</header>
+          <header><h1>JSX</h1></header>
           <p>JSX is a sintax extension to JSX, it might remind you of a template language but it has all the power of Javascript.</p>
           <div class="codebox">
-          <code>const element = &lt;h1&gt;Hello, world!&lt;/h1&gt;;</code>
+            <code>const element = &lt;h1&gt;Hello, world!&lt;/h1&gt;;</code>
           </div>
           <h2>Why JSX</h2>
           <p>React embraces the fact that rendering logic is inherently coupled with other UI logic: how events are handled, how the state changes over time, and how the data is prepared for display.</p>
@@ -49,65 +49,36 @@
           <h2>Embedding Expressions in JSX</h2>
           <p>You can put any valid JavaScript expression inside curly  braces in JSX</p>
           <div class="codebox"><code>function formatName(user) {
-  return user.firstName + ' ' + user.lastName;
-}
+              return user.firstName + ' ' + user.lastName;
+              }
 
-const user = {
-  firstName: 'Harper',
-  lastName: 'Perez'
-};
+              const user = {
+              firstName: 'Harper',
+              lastName: 'Perez'
+              };
 
-const element = (
-  &lt;h1&gt;
-    Hello, {formatName(user)}!
-  &lt;/h1&gt;
-);
+              const element = (
+              &lt;h1&gt;
+              Hello, {formatName(user)}!
+              &lt;/h1&gt;
+              );
 
-ReactDOM.render(
-  element,
-  document.getElementById('root')
-);</code></div>
-          <h2>JSX is an Expression Too</h2>
-          <p>After compilation, JSX expresions become regular JS function calls, and evaluate to JS objects.</p>
-          <p>This means that you can use JSX inside if statements, for loops, assing it to variables and return it from functions.</p>
+              ReactDOM.render(
+              element,
+              document.getElementById('root')
+              );</code></div>
         </section>
-        <section id="Rendering_Elements" class="main-section">
-          <header>Rendering Elements</header>
-          <p> An element describes what you want to see on the screen.</p>
-          <p>Unlike browser DOM elements, React elements are plain objects, and are cheap to create. React DOM takes care of updating the DOM to match the React elements.</p>
-           <p>React elements are immutable. Once you create an element, you can't change its children or attributes.</p>
-           <h2>React Only Updates Whates Necessary</h2>
-           <p>
-           React DOM compares the element and its children to the previous one, and only applies the DOM updates necessary to bring the DOM to the desired state.
-           </p>
+        <section id="id" class="main-section">
+          <header></header>
         </section>
-        <section id="Components_And_Props" class="main-section">
-        <p>
-          Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.<headConceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.er>Components And Props</header>
-        </p>
-        <div class="codebox"><code>function Welcome(props) {
-  return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;;
-}
-
-const element = &lt;Welcome name=&quot;Sara&quot; /&gt;;
-ReactDOM.render(
-  element,
-  document.getElementById('root')
-  );</code></div>
-        <ol>
-          <p>In this example:</p>
-          <li>We call ReactDOM.render() with the &lt;Welcome name=&quot;Sara&quot; /&gt; element.</li>
-          <li>React calls the Welcome component with {name: 'Sara'} as the props.</li>
-          <li>Our Welcome component returns a &lt;h1&gt;Hello, Sara&lt;/h1&gt; element as the result.</li>
-          <li>React DOM efficiently updates the DOM to match &lt;h1&gt;Hello, Sara&lt;/h1&gt;.          </li>
-        </ol>
-        <h2>Composing Components</h2>
-        <p>Components can refer to other components in their output. This lets us use the same component abstraction for any level of detail. A button, a form, a dialog, a screen: in React apps, all those are commonly expressed as components.</p>
+        <section id="id" class="main-section">
+          <header></header>
         </section>
         <section id="id" class="main-section">
           <header></header>
         </section>
       </main>
     </div>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   </body>
 </html>
