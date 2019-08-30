@@ -103,6 +103,99 @@ ReactDOM.render(
         </ol>
         <h2>Composing Components</h2>
         <p>Components can refer to other components in their output. This lets us use the same component abstraction for any level of detail. A button, a form, a dialog, a screen: in React apps, all those are commonly expressed as components.</p>
+        <h2>Extracting Components</h2>
+        <p>Components can be split into smaller components...</p>
+        <div class="codebox">
+<code>function Welcome(props) {
+  return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;;
+}
+
+function App() {
+  return (
+    &lt;div&gt;
+      &lt;Welcome name=\&quot;Sara\&quot; /&gt;
+      &lt;Welcome name=\&quot;Cahal\&quot; /&gt;
+      &lt;Welcome name=\&quot;Edite\&quot; /&gt;
+    &lt;/div&gt;
+  );
+}
+
+ReactDOM.render(
+  &lt;App /&gt;,
+  document.getElementById(\'root\')
+);</code></div>
+        <p>Accepts autor, text and date as props and describes a comment on a social media website. It is not very reusable because of the nesting. So it is a good candidate to decompose.</p>
+        <p>First we will extract Avatar:</p>
+        <div class="codebox">
+          <code>
+function Avatar(props) {
+  return (
+    &lt;img className=\&quot;Avatar\&quot;
+      src={props.user.avatarUrl}
+      alt={props.user.name}
+    /&gt;
+  );
+}
+          </code>
+        </div>
+
+        <p>We can simplify Comment:</p>
+        <div class="codebox">
+          <code>
+function Comment(props) {
+  return (
+    &lt;div className=\&quot;Comment\&quot;&gt;
+      &lt;div className=\&quot;UserInfo\&quot;&gt;
+        &lt;Avatar user={props.author} /&gt;
+        &lt;div className=\&quot;UserInfo-name\&quot;&gt;
+          {props.author.name}
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div className=\&quot;Comment-text\&quot;&gt;
+        {props.text}
+      &lt;/div&gt;
+      &lt;div className=\&quot;Comment-date\&quot;&gt;
+        {formatDate(props.date)}
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+}
+          </code>
+        </div>
+        <p>Next we will extrat an UserInfo component that renders the Avata next to the users name:</p>
+        <div class="codebox">
+          <code>
+function UserInfo(props) {
+  return (
+    &lt;div className=\&quot;UserInfo\&quot;&gt;
+      &lt;Avatar user={props.user} /&gt;
+      &lt;div className=\&quot;UserInfo-name\&quot;&gt;
+        {props.user.name}
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+} 
+          </code></div>
+          <p>This lets us simplify Comment even further:</p>
+          <div class="codebox">
+            <code>
+function Comment(props) {
+  return (
+    &lt;div className=\&quot;Comment\&quot;&gt;
+      &lt;UserInfo user={props.author} /&gt;
+      &lt;div className=\&quot;Comment-text\&quot;&gt;
+        {props.text}
+      &lt;/div&gt;
+      &lt;div className=\&quot;Comment-date\&quot;&gt;
+        {formatDate(props.date)}
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+} 
+            </code>
+          </div>
+          <h2>Props are Read-Only</h2>
+          <p>A component must never modify its own props. All react components must act like pure functions with respect to their propsA component must never modify its own props. All react components must act like pure functions with respect to their propsA component must never modify its own props. All react components must act like pure functions with respect to their props.</p>
         </section>
         <section id="id" class="main-section">
           <header></header>
