@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <title>React Documentation</title>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
+
   </head>
+
   <body>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     <div class="grid-container">
       <nav id="nav-bar">
         <a class="nav-link" href=""><div class="linkblock"><p>Primer Link</p></div></a>
@@ -197,8 +200,33 @@ function Comment(props) {
           <h2>Props are Read-Only</h2>
           <p>A component must never modify its own props. All react components must act like pure functions with respect to their propsA component must never modify its own props. All react components must act like pure functions with respect to their propsA component must never modify its own props. All react components must act like pure functions with respect to their props.</p>
         </section>
-        <section id="id" class="main-section">
-          <header></header>
+        <section id="state-and-lifecycle" class="main-section">
+          <header>State and Lifecycle</header>
+          <p>In applications with many components, it’s very important to free up resources taken by the components when they are destroyed. </p>
+          <p>We can declare special methods on the component class to run some code when a component mounts and unmounts. These methods are called “lifecycle methods”.</p>
+          <h2>Using State Correctly</h2>
+          <ul>
+            <li>
+              <h3>Do Not Modify State Directly</h3>
+              <p>Instead, use setState().
+              The only place where you can assign this.state is the constructor.</p>
+            </li>
+            <li>
+              <h3>State Updates May Be Asynchronous</h3>
+              <p>React may batch multiple setState() calls into a single update for performace.</p>
+              <p>Because this.props and this.state may be updated asynchronously, you should not rely on their values for calculating the next state.</p>
+              <p>To fix it, use a second form of setState() that accepts a function rather than an object. That function will receive the previous state as the first argument, and the props at the time the update is applied as the second argument:</p>
+            </li>
+            <li>
+              <h3>State Updates are Merged</h3>
+            </li>  
+            <h2>The Data Flows Down</h2>
+            <p>Neither parent nor child components can know if a certain component is stateful or stateless, and they shouldn’t care whether it is defined as a function or a class.
+This is why state is often called local or encapsulated. It is not accessible to any component other than the one that owns and sets it.</p>
+          </ul>
+        </section>
+        <section>
+          
         </section>
       </main>
     </div>
