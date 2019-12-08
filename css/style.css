@@ -18,23 +18,34 @@ section {
   height: 100vh;
   grid-gap: 1em;
 }
+
+@media only screen and (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 100%;
+  }
+  #navbar {
+    height: 25vh;
+    overflow: scroll;
+  }
+}
 main {
 overflow:auto;
 padding-left: 3em;
 padding-right: 3em;
 }
-#nav-bar {
+#navbar {
   display:flex;
   flex-direction: column;
-  
-}
-a {
 }
 
 .linkblock {
   height: 3em;
   border: 1px solid gray;
   border-bottom: none;
+}
+/* must find way to select last one to give it bottom border */
+/* .linkblock:last-child {
+  border-bottom: 1px; */
 }
 .linkblock p {
   padding-left: 1em;
@@ -51,7 +62,3 @@ code {
   margin-top:2em;
   margin-bottom: 2em;
 }
- 
-  
-/*   border-bottom: solid; */
-/* } */
